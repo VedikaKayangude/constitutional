@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitutional Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <!-- Sign Up/Login Form -->
+    <div id="login-form" class="container login-bg">
+        <div class="form-card">
+            <h1>Welcome to the CONSTITUTIONAL GAME</h1>
+            <p>Please Sign Up or Log In to Continue</p>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Mode Selection Page -->
+    <div id="mode-selection-page" class="container hidden">
+        <h1>Choose Your Mode</h1>
+        <div class="options">
+            <div onclick="selectMode('exploration')" class="option">
+                <img src="people copy.jpg" alt="Exploration">
+                <p>Exploration Mode</p>
+            </div>
+            <div onclick="selectMode('scenario')" class="option">
+                <img src="scenaro.jpg" alt="Scenario">
+                <p>Scenario Mode</p>
+            </div>
+            <div onclick="selectMode('quiz')" class="option">
+                <img src="quiz.jpg" alt="Quiz">
+                <p>Quiz Mode</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Game Selection Page -->
+    <div id="quiz-game-selection" class="container hidden">
+        <h1>Select Your Quiz Game</h1>
+        <div class="options">
+            <div onclick="selectQuiz('spinwheel')" class="option">
+                <img src="spin.jpg" alt="Spin Wheel">
+                <p><b>SPIN THE WHEEL</b></p>
+            </div>
+            <div onclick="selectQuiz('crossword')" class="option">
+                <img src="crosswords.jpg" alt="Crossword">
+                <p><b>CROSSWORD PUZZLE</b></p>
+            </div>
+            <div onclick="selectQuiz('match')" class="option">
+                <img src="Match.jpg" alt="Match the Columns">
+                <p><b>MATCH THE COLUMN</b></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Exploration Mode Page -->
+    <div id="exploration-mode" class="container hidden">
+        <h1>SIMPLIFIED ARTICLES OF CONSTITUTION</h1>
+        
+        <!-- Union Chapters -->
+        <div id="union-chapters">
+            <h2>THE UNION</h2>
+            <button onclick="showUnionChapter('chapter1')">Chapter I - The Union and its Territory</button>
+            <button onclick="showUnionChapter('chapter2')">Chapter II - The President</button>
+            <button onclick="showUnionChapter('chapter3')">Chapter III - The Council of Ministers</button>
+            <button onclick="showUnionChapter('chapter4')">Chapter IV - The Parliament</button>
+            <button onclick="showUnionChapter('chapter5')">Chapter V - The Relationship Between the Union and the States</button>
+            <button onclick="showUnionChapter('chapter6')">Chapter VI - The Union Territories</button>
+        </div>
+
+        <!-- State Chapters -->
+        <div id="state-chapters">
+            <h2>THE STATE</h2>
+            <button onclick="showStateChapter('chapter7')">Chapter I - The Governor</button>
+            <button onclick="showStateChapter('chapter8')">Chapter II - The Council of Ministers</button>
+            <button onclick="showStateChapter('chapter9')">Chapter III - The State Legislature</button>
+            <button onclick="showStateChapter('chapter10')">Chapter IV - Legislative Procedure</button>
+            <button onclick="showStateChapter('chapter11')">Chapter V - The High Courts</button>
+            <button onclick="showStateChapter('chapter12')">Chapter VI - Special Provisions Relating to Certain Classes</button>
+        </div>
+
+        <!-- Union Chapter Details -->
+        <div id="chapter1" class="hidden">
+            <h2>Chapter I - The Union and its Territory</h2>
+            <button onclick="showArticle('article1')">Article 1</button>
+            <button onclick="showArticle('article2')">Article 2</button>
+            <button onclick="showArticle('article3')">Article 3</button>
+            <button onclick="showArticle('article4')">Article 4</button>
+        </div>
+        <div id="chapter2" class="hidden">
+            <h2>Chapter II - The President</h2>
+            <button onclick="showArticle('article52')">Article 52</button>
+            <button onclick="showArticle('article53')">Article 53</button>
+            <button onclick="showArticle('article54')">Article 54</button>
+            <button onclick="showArticle('article55')">Article 55</button>
+            <button onclick="showArticle('article56')">Article 56</button>
+            <button onclick="showArticle('article57')">Article 57</button>
+            <button onclick="showArticle('article58')">Article 58</button>
+            <button onclick="showArticle('article59')">Article 59</button>
+            <button onclick="showArticle('article60')">Article 60</button>
+            <button onclick="showArticle('article61')">Article 61</button>
+            <button onclick="showArticle('article62')">Article 62</button>
+            <button onclick="showArticle('article63')">Article 63</button>
+            <button onclick="showArticle('article64')">Article 64</button>
+            <button onclick="showArticle('article65')">Article 65</button>
+            <button onclick="showArticle('article66')">Article 66</button>
+            <button onclick="showArticle('article67')">Article 67</button>
+            <button onclick="showArticle('article68')">Article 68</button>
+            <button onclick="showArticle('article69')">Article 69</button>
+            <button onclick="showArticle('article70')">Article 70</button>
+            <button onclick="showArticle('article71')">Article 71</button>
+            <button onclick="showArticle('article72')">Article 72</button>
+            <button onclick="showArticle('article73')">Article 73</button>
+            <button onclick="showArticle('article74')">Article 74</button>
+            <button onclick="showArticle('article75')">Article 75</button>
+            <button onclick="showArticle('article76')">Article 76</button>
+            <button onclick="showArticle('article77')">Article 77</button>
+            <button onclick="showArticle('article78')">Article 78</button>
+        </div>
+        <div id="chapter3" class="hidden">
+            <h2>Chapter III - The Council of Ministers</h2>
+            <button onclick="showArticle('article75')">Article 75</button>
+            <button onclick="showArticle('article76')">Article 76</button>
+            <button onclick="showArticle('article77')">Article 77</button>
+            <button onclick="showArticle('article78')">Article 78</button>
+        </div>
+        <div id="chapter4" class="hidden">
+            <h2>Chapter IV - The Parliament</h2>
+            <button onclick="showArticle('article79')">Article 79</button>
+            <button onclick="showArticle('article80')">Article 80</button>
+            <button onclick="showArticle('article81')">Article 81</button>
+            <button onclick="showArticle('article82')">Article 82</button>
+            <button onclick="showArticle('article83')">Article 83</button>
+            <button onclick="showArticle('article84')">Article 84</button>
+            <button onclick="showArticle('article85')">Article 85</button>
+            <button onclick="showArticle('article86')">Article 86</button>
+            <button onclick="showArticle('article87')">Article 87</button>
+            <button onclick="showArticle('article88')">Article 88</button>
+            <button onclick="showArticle('article89')">Article 89</button>
+            <button onclick="showArticle('article90')">Article 90</button>
+            <button onclick="showArticle('article91')">Article 91</button>
+            <button onclick="showArticle('article92')">Article 92</button>
+            <button onclick="showArticle('article93')">Article 93</button>
+            <button onclick="showArticle('article94')">Article 94</button>
+            <button onclick="showArticle('article95')">Article 95</button>
+            <button onclick="showArticle('article96')">Article 96</button>
+            <button onclick="showArticle('article97')">Article 97</button>
+            <button onclick="showArticle('article98')">Article 98</button>
+            <button onclick="showArticle('article99')">Article 99</button>
+            <button onclick="showArticle('article100')">Article 100</button>
+            <button onclick="showArticle('article101')">Article 101</button>
+            <button onclick="showArticle('article102')">Article 102</button>
+            <button onclick="showArticle('article103')">Article 103</button>
+            <button onclick="showArticle('article104')">Article 104</button>
+            <button onclick="showArticle('article105')">Article 105</button>
+            <button onclick="showArticle('article106')">Article 106</button>
+            <button onclick="showArticle('article107')">Article 107</button>
+            <button onclick="showArticle('article108')">Article 108</button>
+            <button onclick="showArticle('article109')">Article 109</button>
+            <button onclick="showArticle('article110')">Article 110</button>
+            <button onclick="showArticle('article111')">Article 111</button>
+            <button onclick="showArticle('article112')">Article 112</button>
+            <button onclick="showArticle('article113')">Article 113</button>
+            <button onclick="showArticle('article114')">Article 114</button>
+            <button onclick="showArticle('article115')">Article 115</button>
+            <button onclick="showArticle('article116')">Article 116</button>
+            <button onclick="showArticle('article117')">Article 117</button>
+            <button onclick="showArticle('article118')">Article 118</button>
+            <button onclick="showArticle('article119')">Article 119</button>
+            <button onclick="showArticle('article120')">Article 120</button>
+            <button onclick="showArticle('article121')">Article 121</button>
+            <button onclick="showArticle('article122')">Article 122</button>
+        </div>
+        <div id="chapter5" class="hidden">
+            <h2>Chapter V - The Relationship Between the Union and the States</h2>
+            <button onclick="showArticle('article245')">Article 245</button>
+            <button onclick="showArticle('article246')">Article 246</button>
+            <button onclick="showArticle('article247')">Article 247</button>
+            <button onclick="showArticle('article248')">Article 248</button>
+            <button onclick="showArticle('article249')">Article 249</button>
+            <button onclick="showArticle('article250')">Article 250</button>
+            <button onclick="showArticle('article251')">Article 251</button>
+            <button onclick="showArticle('article252')">Article 252</button>
+            <button onclick="showArticle('article253')">Article 253</button>
+            <button onclick="showArticle('article254')">Article 254</button>
+            <button onclick="showArticle('article255')">Article 255</button>
+        </div>
+        <div id="chapter6" class="hidden">
+            <h2>Chapter VI - The Union Territories</h2>
+            <button onclick="showArticle('article239')">Article 239</button>
+            <button onclick="showArticle('article240')">Article 240</button>
+            <button onclick="showArticle('article241')">Article 241</button>
+            <button onclick="showArticle('article242')">Article 242</button>
+        </div>
+
+        <!-- State Chapter Details -->
+        <div id="chapter7" class="hidden">
+            <h2>Chapter I - The Governor</h2>
+            <button onclick="showArticle('article153')">Article 153</button>
+            <button onclick="showArticle('article154')">Article 154</button>
+            <button onclick="showArticle('article155')">Article 155</button>
+            <button onclick="showArticle('article156')">Article 156</button>
+            <button onclick="showArticle('article157')">Article 157</button>
+            <button onclick="showArticle('article158')">Article 158</button>
+            <button onclick="showArticle('article159')">Article 159</button>
+            <button onclick="showArticle('article160')">Article 160</button>
+            <button onclick="showArticle('article161')">Article 161</button>
+            <button onclick="showArticle('article162')">Article 162</button>
+        </div>
+        <div id="chapter8" class="hidden">
+            <h2>Chapter II - The Council of Ministers</h2>
+            <button onclick="showArticle('article168')">Article 168</button>
+            <button onclick="showArticle('article169')">Article 169</button>
+            <button onclick="showArticle('article170')">Article 170</button>
+            <button onclick="showArticle('article171')">Article 171</button>
+        </div>
+        <div id="chapter9" class="hidden">
+            <h2>Chapter III - The State Legislature</h2>
+            <button onclick="showArticle('article172')">Article 172</button>
+            <button onclick="showArticle('article173')">Article 173</button>
+            <button onclick="showArticle('article174')">Article 174</button>
+            <button onclick="showArticle('article175')">Article 175</button>
+        </div>
+        <div id="chapter10" class="hidden">
+            <h2>Chapter IV - Legislative Procedure</h2>
+            <button onclick="showArticle('article176')">Article 176</button>
+            <button onclick="showArticle('article177')">Article 177</button>
+            <button onclick="showArticle('article178')">Article 178</button>
+            <button onclick="showArticle('article179')">Article 179</button>
+            <button onclick="showArticle('article180')">Article 180</button>
+            <button onclick="showArticle('article181')">Article 181</button>
+            <button onclick="showArticle('article182')">Article 182</button>
+            <button onclick="showArticle('article183')">Article 183</button>
+            <button onclick="showArticle('article184')">Article 184</button>
+            <button onclick="showArticle('article185')">Article 185</button>
+            <button onclick="showArticle('article186')">Article 186</button>
+            <button onclick="showArticle('article187')">Article 187</button>
+            <button onclick="showArticle('article188')">Article 188</button>
+            <button onclick="showArticle('article189')">Article 189</button>
+            <button onclick="showArticle('article190')">Article 190</button>
+        </div>
+        <div id="chapter11" class="hidden">
+            <h2>Chapter V - The High Courts</h2>
+            <button onclick="showArticle('article214')">Article 214</button>
+            <button onclick="showArticle('article215')">Article 215</button>
+            <button onclick="showArticle('article216')">Article 216</button>
+            <button onclick="showArticle('article217')">Article 217</button>
+            <button onclick="showArticle('article218')">Article 218</button>
+            <button onclick="showArticle('article219')">Article 219</button>
+            <button onclick="showArticle('article220')">Article 220</button>
+            <button onclick="showArticle('article221')">Article 221</button>
+            <button onclick="showArticle('article222')">Article 222</button>
+            <button onclick="showArticle('article223')">Article 223</button>
+            <button onclick="showArticle('article224')">Article 224</button>
+            <button onclick="showArticle('article225')">Article 225</button>
+            <button onclick="showArticle('article226')">Article 226</button>
+            <button onclick="showArticle('article227')">Article 227</button>
+            <button onclick="showArticle('article228')">Article 228</button>
+            <button onclick="showArticle('article229')">Article 229</button>
+            <button onclick="showArticle('article230')">Article 230</button>
+            <button onclick="showArticle('article231')">Article 231</button>
+        </div>
+        <div id="chapter12" class="hidden">
+            <h2>Chapter VI - Special Provisions Relating to Certain Classes</h2>
+            <button onclick="showArticle('article330')">Article 330</button>
+            <button onclick="showArticle('article331')">Article 331</button>
+            <button onclick="showArticle('article332')">Article 332</button>
+            <button onclick="showArticle('article333')">Article 333</button>
+            <button onclick="showArticle('article334')">Article 334</button>
+            <button onclick="showArticle('article335')">Article 335</button>
+            <button onclick="showArticle('article336')">Article 336</button>
+            <button onclick="showArticle('article337')">Article 337</button>
+            <button onclick="showArticle('article338')">Article 338</button>
+            <button onclick="showArticle('article339')">Article 339</button>
+            <button onclick="showArticle('article340')">Article 340</button>
+            <button onclick="showArticle('article341')">Article 341</button>
+            <button onclick="showArticle('article342')">Article 342</button>
+        </div>
+    </div>
+
+    
+   
+
+
+
+    <div id="scenario-mode" class="container hidden">
+        <h1>Select a Scenario</h1>
+        <div class="options2">
+            <button onclick="selectScenario('case1')">Parliamentary Dispute</button>
+            <button onclick="selectScenario('case2')">Judicial Review Case</button>
+            <button onclick="selectScenario('case3')">Executive Decision Challenge</button>
+            <button onclick="selectScenario('case4')">Election Controversy</button>
+            <button onclick="selectScenario('case5')">Constitutional Amendment</button>
+            <button onclick="selectScenario('case6')">Civil Rights Violation</button>
+            <button onclick="selectScenario('case7')">Federal vs. State Powers</button>
+            <button onclick="selectScenario('case8')">Budget Allocation Dispute</button>
+            <button onclick="selectScenario('case9')">Public Interest Litigation</button>
+            <button onclick="selectScenario('case10')">Emergency Powers Use</button>
+        </div>
+    </div>
+    
+
+    <script src="java.js"></script>
+</body>
+</html>
