@@ -83,6 +83,14 @@ button:hover {
     transform: scale(1.05);
 }
 
+.backpage{
+background-color:black;
+height:70px;
+width:300px;
+
+
+}
+
 button:active {
     background-color: #c95013;
     transform: scale(1);
